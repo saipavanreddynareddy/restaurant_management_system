@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Flavour Fusion</title>
+   
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet" href="stylei.css">
+     <script src="scripts.js"></script>
+	
+	</head>
+	<style>
+		.cart-symbol {
+			height:4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: .5rem;
+background: #eee;
+color: var(--black);
+font-size: 2rem;
+margin-right: .3rem;
+cursor: pointer;
+text-align: center;
+        }
+
+		
+.cart-symbol :hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+    </style>
+
+		<header class="header">
+			<a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Flavour fusion</a>
+
+			<nav class="navbar">
+				<a href="index2.html">Home</a>
+				<a href="menu1.html">Menu</a>
+				<a href="starter1.html">starters</a>
+				<a href="entree1.html">Entree</a>
+				<a href="beverages1.html">Beverages</a>
+				<a href="desserts1.html">Desserts</a>
+			</nav>
+			
+
+
+			<div class="icons">
+				<div class="fas fa-bars" id="menu-btn"></div>
+				<div class="fas fa-search" id="search-btn"></div>
+				<div class="fas fa-shopping-cart" id="cart-btn"></div>
+				<div class="fas fa-user" id="user-btn"></div>
+			</div>
+			
+			<form action="" class="search-form">
+				<input type="search" id="search-box" placeholder="search here...">
+				<label for="search-box" class="fas fa-search"></label>
+				
+			</form>
+			<form action="" class="cart-form">
+				<a href="cart.html" id="cart-box">Cart Items</a>
+				<label for="cart-box" class="fas fa-shopping-cart"></label>
+			</form>
+			<form action="" class="profile-form">
+				
+				
+				<a href="logout.php" id="profile-box">Logout</a>
+				<label for="profile-box" class="fas fa-sign-out"></label>
+			</form>
+				
+		</header>
+
+        
+        <body>
+            <section class="menu-area">
+                <div class="container">
+                    <h1 class="section-title">Our Menu</h1>
+                    <div class="menu-row">
+                        <div class="menu-item">
+                            <img src="img/m1.jpg" alt="Dish 1" class="menu-image">
+                            <h2 class="menu-title">Chicken dum biryani</h2>
+                            <p class="menu-price">₹449.00</p>
+                            <button class="cart-btn" onclick="addToCart('Chicken dum biryani', 449.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m2.jpg" alt="Dish 2" class="menu-image">
+                            <h2 class="menu-title">Mutton biryani</h2>
+                            <p class="menu-price">₹499.00</p>
+                            <button class="cart-btn" onclick="addToCart('Mutton biryani', 499.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m3.jpg" alt="Dish 3" class="menu-image">
+                            <h2 class="menu-title">Prawn biryani</h2>
+                            <p class="menu-price">₹499.00</p>
+                            <button class="cart-btn" onclick="addToCart('Prawn biryani', 499.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m4.jpg" alt="Dish 4" class="menu-image">
+                            <h2 class="menu-title">Vegetable biryani</h2>
+                            <p class="menu-price">₹499.00</p>
+                            <button class="cart-btn" onclick="addToCart('Vegetable biryani', 499.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m5.jpg" alt="Dish 5" class="menu-image">
+                            <h2 class="menu-title">Chicken pulao</h2>
+                            <p class="menu-price">₹399.00</p>
+                            <button class="cart-btn" onclick="addToCart('Chicken pulao', 399.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m6.jpg" alt="Dish 6" class="menu-image">
+                            <h2 class="menu-title">Cumin rice</h2>
+                            <p class="menu-price">₹299.00</p>
+                            <button class="cart-btn" onclick="addToCart('Cumin rice', 299.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m7.jpg" alt="Dish 7" class="menu-image">
+                            <h2 class="menu-title">Kofta Biryani</h2>
+                            <p class="menu-price">₹549.00</p>
+                            <button class="cart-btn" onclick="addToCart('Kofta Biryani', 549.00)">Add to Cart</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="img/m8.jpg" alt="Dish 8" class="menu-image">
+                            <h2 class="menu-title">Chettinad Biryani</h2>
+                            <p class="menu-price">₹499.00</p>
+                            <button class="cart-btn" onclick="addToCart('Chettinad Biryani', 499.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+           
+            <script src="script.js"></script>
+            <script src="scripts.js"></script>
+        </body>
+        </html>
+        

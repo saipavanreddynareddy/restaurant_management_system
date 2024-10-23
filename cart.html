@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Flavour Fusion</title>
+   
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet" href="stylei.css">
+     <script src="scripts.js"></script>
+	
+	</head>
+
+	<body>
+<style>
+		.cart-symbol {
+			height:4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: .5rem;
+background: #eee;
+color: var(--black);
+font-size: 2rem;
+margin-right: .3rem;
+cursor: pointer;
+text-align: center;
+        }
+
+		
+.cart-symbol :hover{
+    background: var(--orange);
+    color: #fff;
+}
+
+    </style>
+
+		<header class="header">
+			<a href="#" class="logo"><i class="fas fa-shopping-basket"></i>Flavour fusion</a>
+
+			<nav class="navbar">
+				<a href="index.html">Home</a>
+				<a href="menu.html">Menu</a>
+				<a href="about.html">About</a>
+				<a href="booking.html">Booking</a>
+				<a href="services.html">Services</a>
+				
+			</nav>
+			
+
+
+			<div class="icons">
+				<div class="fas fa-bars" id="menu-btn"></div>
+				<div class="fas fa-search" id="search-btn"></div>
+				<div class="fas fa-shopping-cart" id="cart-btn"></div>
+				<div class="fas fa-user" id="user-btn"></div>
+			</div>
+			
+			<form action="" class="search-form">
+				<input type="search" id="search-box" placeholder="search here...">
+				<label for="search-box" class="fas fa-search"></label>
+				
+			</form>
+			<form action="" class="cart-form">
+				<a href="cart.html" id="cart-box">Cart Items</a>
+				<label for="cart-box" class="fas fa-shopping-cart"></label>
+			</form>
+			<form action="" class="profile-form">
+				<a href="login.php" id="profile-box">Login</a>
+				<label for="profile-box" class="fas fa-user"></label>
+				<a href="signup.html" id="profile-box">Sign up</a>
+				<label for="profile-box" class="fas fa-user"></label>
+			</form>
+				
+			</header>
+		
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cart-symbol {
+            display: inline-block;
+            font-size: 36px;
+            line-height: 1;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .cart-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-total-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cart-header">
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <h1>Cart</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h2>Cart Items</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-total-container">
+                <strong>Total: ₹<span id="cart-total">0.00</span></strong>
+            </div>
+
+            <form id="cart-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Method</label>
+                    <select id="payment" name="payment" required>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="Phonepay/Gpay">Phonepay/Gpay</option>
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                    </select>
+                </div>
+                <input type="hidden" id="cart-data" name="cart_data">
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

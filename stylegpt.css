@@ -1,0 +1,115 @@
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form styling */
+.booking-form {
+    width: 100%;
+}
+
+.booking-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.booking-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.booking-form .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.booking-form .input-group {
+    display: flex;
+    align-items: center;
+}
+
+.booking-form .input-group .form-control {
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.booking-form .input-group .input-group-append {
+    display: flex;
+}
+
+.booking-form .input-group .input-group-append .btn {
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.booking-form .input-group .input-group-append .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.booking-form textarea.form-control {
+    resize: none;
+    height: 100px;
+}
+
+.booking-form .primary-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-form .primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.booking-form .alert-msg {
+    margin-top: 20px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .booking-form .row {
+        flex-direction: column;
+    }
+
+    .booking-form .input-group {
+        flex-direction: column;
+    }
+
+    .booking-form .input-group .form-control,
+    .booking-form .input-group .input-group-append .btn {
+        border-radius: 4px;
+    }
+
+    .booking-form .input-group .input-group-append {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
